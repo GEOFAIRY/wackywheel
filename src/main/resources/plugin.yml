@@ -1,0 +1,30 @@
+name: WackyWheel
+main: com.gmail.kyrans19.WackyWheel.WackyWheel
+version: 1.2-SNAPSHOT
+author: GEOFAIRY, i got hoes
+
+commands:
+  version:
+    description: Wacky Wheel version Command
+    usage: /version
+    permission: WackyWheel.version
+    permission-message: You lack the required permissions for this command
+  setWheelLocation:
+    description: Set wheel location
+    usage: /setWheelLocation [args]
+    permission: WackyWheel.setWheelLocation
+    permission-message: You lack the required permissions for this command
+
+
+permission:
+  WackyWheel.*:
+    description: Gives acces to all Whackwheel commands
+    children:
+      WackyWheel.version: true
+      WackyWheel.setWheelLocation: true
+  WackyWheel.version:
+    description: Wacky Wheel version Command
+    default: op
+  WackyWheel.setWheelLocation:
+    description: Set Wheel location
+    default: op
